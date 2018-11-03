@@ -22,19 +22,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 moment.updateLocale('ko', {
     relativeTime : {
         future: "in %s",
-        past:   "%s 전",
-        s  : '몇 초',
-        ss : '%d 초',
-        m:  "몇 분",
-        mm: "%d 분",
-        h:  "한 시간",
-        hh: "%d 시간",
-        d:  "하루",
-        dd: "%d 일",
-        M:  "한 달",
-        MM: "%d 달",
-        y:  "일 년",
-        yy: "%d 년"
+        past:   "%s ago",
+        s  : 'A few seconds',
+        ss : '%d seconds',
+        m:  "A few Minutes",
+        mm: "%d Minutes",
+        h:  "One Hour",
+        hh: "%d Hours",
+        d:  "A Day",
+        dd: "%d Days",
+        M:  "A month",
+        MM: "%d months",
+        y:  "One year",
+        yy: "%d years"
     }
 });
 //몇달전,몇초전,moment.from을위한 한국어 설정
@@ -86,16 +86,16 @@ exports.viewMessage=function (req, res, next) {
 
     if(!req.session.passport)
     {
-        return res.render('unusualroute',{error:"로그인이 필요합니다."});
+        return res.render('unusualroute',{error:"Login is required."});
     }
     if(!connum) //애초에 쿼리스트링으로 왔는데 쿼리스트링이 존재하지않는경우는 없지않는지.
     {
-        return res.render('unusualroute',{error:"잘못된 경로입니다."});
+        return res.render('unusualroute',{error:"Invalid path."});
     }
     Conversation.findOne({_id:connum},function (err, conver) {
         if(!conver)
         {
-            return res.render('unusualroute',{error:"잘못된 경로입니다."});
+            return res.render('unusualroute',{error:"Invalid path."});
         }
         //내가 아닌 상대방의 객체에 접근하기 위한 조건문.
         if (conver.to === req.session.passport.user.email) {
@@ -112,7 +112,7 @@ exports.viewMessage=function (req, res, next) {
             i = 1;
                 }
             else {
-                    return res.render('unusualroute',{error:"잘못된 경로입니다."});
+                    return res.render('unusualroute',{error:"Invalid path."});
                 }
                 if (i === 1)
                 {

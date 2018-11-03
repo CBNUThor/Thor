@@ -50,8 +50,8 @@ html(lang='en')
                     include components/sideBarSeller_KKY.pug
                     .col-md-10.offset-md-1.col-lg-9.offset-lg-0
                         .widget.welcome-message
-                            h3 메뉴 등록
-                            p 메뉴를 등록 할 수 있습니다.
+                            h3 Register Menu
+                            p You can register the menu.
                             // Container End
                         section.submit-coupon-sec.section
                             .container
@@ -60,19 +60,19 @@ html(lang='en')
                                         form(action='/seller/Register_Menu', method='post', enctype='multipart/form-data')
                                             // Store Website
                                             .form-group
-                                                label(for='name') 메뉴 이름
+                                                label(for='name') Menu Name
                                                 input#name.form-control(type='text', placeholder='ex)김밥,제육볶음', name='title')
                                             // Coupon Type
                                             // Coupon Code
                                             .form-group.mb-30.code-input
-                                                label(for='price') 가격
+                                                label(for='price') Price
                                                 input#price.form-control(type='text', placeholder='ex)3000', name='price')
                                             // Affiliate URL
                                             .form-group.mb-30
-                                                label(for='description') 메뉴 상세 설명
+                                                label(for='description') Detailed menu description
                                                 textarea#description.form-control(placeholder='Please Explain Everything in Deatail', name='text')
                                             .form-group.col-xs-12
-                                                label.control-label.requiredField.label-title 메뉴 이미지
+                                                label.control-label.requiredField.label-title Menu Image
                                                 .page(style='margin-top: 10px;')
                                                     // Our File Inputs
                                                     .wrap-custom-file
@@ -98,73 +98,73 @@ html(lang='en')
                                                     // End Page Wrap
                                             // Discount Description
                                             .form-group.mb-30
-                                                label(for='hashtag') 해쉬태그
+                                                label(for='hashtag') Hash tag
                                                 input#hashtag.form-control(type='text', placeholder='#치킨,#단짠단짠', name='hashtag')
                                             .form-group
-                                                label(for='time') 운영 시간
+                                                label(for='time') Opening Hour
                                                 #time.row
                                                     .btn-group(data-toggle='buttons', style='margin:auto;')
                                                         if(seller.optionMon === 'on')
                                                             label.btn-sm.btn.btn-week.active
                                                                 input(type='checkbox', autocomplete='off', name='optionMon', checked='checked')
-                                                                | 월
+                                                                | Mon
                                                         else
                                                             label.btn-sm.btn.btn-week
                                                                 input(type='checkbox', autocomplete='off', name='optionMon')
-                                                                | 월
+                                                                | Mon
                                                         if(seller.optionTues === 'on')
                                                             label.btn-sm.btn.btn-week.active
                                                                 input(type='checkbox', autocomplete='off', name='optionTues', checked='checked')
-                                                                | 화
+                                                                | Tue
                                                         else
                                                             label.btn-sm.btn.btn-week
                                                                 input(type='checkbox', autocomplete='off', name='optionTues')
-                                                                | 화
+                                                                | Tue
                                                         if(seller.optionWen === 'on')
                                                             label.btn-sm.btn.btn-week.active
                                                                 input(type='checkbox', autocomplete='off', name='optionWen', checked='checked')
-                                                                | 수
+                                                                | Wed
                                                         else
                                                             label.btn-sm.btn.btn-week
                                                                 input(type='checkbox', autocomplete='off', name='optionWen')
-                                                                | 수
+                                                                | Wed
                                                         if(seller.optionThur === 'on')
                                                             label.btn-sm.btn.btn-week.active
                                                                 input(type='checkbox', autocomplete='off', name='optionThur', checked='checked')
-                                                                | 목
+                                                                | Thu
                                                         else
                                                             label.btn-sm.btn.btn-week
                                                                 input(type='checkbox', autocomplete='off', name='optionThur')
-                                                                | 목
+                                                                | Thu
                                                         if(seller.optionFri === 'on')
                                                             label.btn-sm.btn.btn-week.active
                                                                 input(type='checkbox', autocomplete='off', name='optionFri', checked='checked')
-                                                                | 금
+                                                                | Fri
                                                         else
                                                             label.btn-sm.btn.btn-week
                                                                 input(type='checkbox', autocomplete='off', name='optionFri')
-                                                                | 금
+                                                                | Fri
                                                         if(seller.optionSat === 'on')
                                                             label.btn-sm.btn.btn-week.active
                                                                 input(type='checkbox', autocomplete='off', name='optionSat', checked='checked')
-                                                                | 토
+                                                                | Sat
                                                         else
                                                             label.btn-sm.btn.btn-week
                                                                 input(type='checkbox', autocomplete='off', name='optionSat')
-                                                                | 토
+                                                                | Sat
                                                         if(seller.optionSun === 'on')
                                                             label.btn-sm.btn.btn-week.active
                                                                 input(type='checkbox', autocomplete='off', name='optionSun', checked='checked')
-                                                                | 일
+                                                                | Sun
                                                         else
                                                             label.btn-sm.btn.btn-week
                                                                 input(type='checkbox', autocomplete='off', name='optionSun')
-                                                                | 일
+                                                                | Sun
                                                     .row.col-md-3.justify-content-center
                                                         input#txtopertime1.form-control.col-md-5(type='text', onkeypress='onlyNumber();', value=seller.optionTime1, name='optionTime1')
                                                         h5(style='margin-top:10px') :
                                                         input#txtopertime2.form-control.col-md-5(type='text', value=seller.optionTime2, name='optionTime2')
-                                            label(for='service') 서비스 종류
+                                            label(for='service') Type of service
                                             // Checkbox
                                             #service.form-check
                                                 label.form-check-label(for='hide-profile1', style='color: #000; font-weight: 500; font-size: 16px;')
@@ -172,21 +172,21 @@ html(lang='en')
                                                         input#hide-profile1.form-check-input(type='checkbox', name='optionDelivery', value='on', checked='checked')
                                                     else
                                                         input#hide-profile1.form-check-input(type='checkbox', name='optionDelivery', value='on')
-                                                    |                            배달 서비스
+                                                    |                            Delivery Service
                                                 label.form-check-label(for='hide-profile2', style='color: #000; font-weight: 500; font-size: 16px;')
                                                     if(seller.optionPacking === 'on')
                                                         input#hide-profile2.form-check-input(type='checkbox', name='optionPacking', value='on', checked='checked')
                                                     else
                                                         input#hide-profile2.form-check-input(type='checkbox', name='optionPacking', value='on')
-                                                    |                            포장 서비스
+                                                    |                            Packing Service
                                                 label.form-check-label(for='hide-profile3', style='color: #000; font-weight: 500; font-size: 16px;')
                                                     if(seller.optionVisit === 'on')
                                                         input#hide-profile3.form-check-input(type='checkbox', name='optionVisit', value='on', checked='checked')
                                                     else
                                                         input#hide-profile3.form-check-input(type='checkbox', name='optionVisit', value='on')
-                                                    |                            방문 서비스
+                                                    |                            Visit Service
 
-                                            button.btn.btn-transparent(onclick='submit') 메뉴 등록
+                                            button.btn.btn-transparent(onclick='submit') Register Menu
         //
           ============================
           =            Footer            =

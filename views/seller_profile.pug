@@ -38,83 +38,83 @@ html(lang='en')
                     .col-md-10.offset-md-1.col-lg-9.offset-lg-0
                         // Edit Profile Welcome Text
                         .widget.welcome-message
-                            h2 매장 관리
-                            p 등록한 매장의 타이틀, 소개글, 서비스 종류, 운영 시간, 주소, 이미지를 관리할 수 있습니다.
+                            h2 Management Store
+                            p You can manage the title, introduction, service type, operation time, address, and image of registered store.
                         // Edit Personal Info
                         .widget.personal-info
-                            h3.widget-header.user 매장 타이틀 / 소개 / 서비스 종류 / 운영 시간
+                            h3.widget-header.user Store Title / Introduction / Service Type / Operating Hours
                             form(action='#')
                                 .form-group
-                                    label(for='title') 매장 타이틀
+                                    label(for='title') Store Title
                                     input#title.form-control(type='text', value=seller.shopName)
                                 .form-group
-                                    label(for='intro') 매장 소개
+                                    label(for='intro') Store Introduction
                                     textarea#intro.form-control(rows='10', placeholder=seller.text)
                                 .form-group
-                                    label(for='time') 운영 시간
+                                    label(for='time') Opening Hours
                                     #time.row
                                         .btn-group(data-toggle='buttons', style='margin:auto;')
                                             if(seller.optionMon==='on')
                                                 label.btn-sm.btn.btn-week.active
                                                     input(type='checkbox', autocomplete='off', checked='checked')
-                                                    | 월
+                                                    | Mon
                                             else
                                                 label.btn-sm.btn.btn-week
                                                     input(type='checkbox', autocomplete='off')
-                                                    | 월
+                                                    | Mon
                                             if(seller.optionTues === 'on')
                                                 label.btn-sm.btn.btn-week.active
                                                     input(type='checkbox', autocomplete='off', checked='checked')
-                                                    | 화
+                                                    | Tue
                                             else
                                                 label.btn-sm.btn.btn-week
                                                     input(type='checkbox', autocomplete='off')
-                                                    | 화
+                                                    | Tue
                                             if(seller.optionWen === 'on')
                                                 label.btn-sm.btn.btn-week.active
                                                     input(type='checkbox', autocomplete='off', checked='checked')
-                                                    | 수
+                                                    | Wed
                                             else
                                                 label.btn-sm.btn.btn-week
                                                     input(type='checkbox', autocomplete='off')
-                                                    | 수
+                                                    | Wed
                                             if(seller.optionThur === 'on')
                                                 label.btn-sm.btn.btn-week.active
                                                     input(type='checkbox', autocomplete='off', checked='checked')
-                                                    | 목
+                                                    | Thu
                                             else
                                                 label.btn-sm.btn.btn-week
                                                     input(type='checkbox', autocomplete='off')
-                                                    | 목
+                                                    | Thu
                                             if(seller.optionFri === 'on')
                                                 label.btn-sm.btn.btn-week.active
                                                     input(type='checkbox', autocomplete='off', checked='checked')
-                                                    | 금
+                                                    | Fri
                                             else
                                                 label.btn-sm.btn.btn-week
                                                     input(type='checkbox', autocomplete='off')
-                                                    | 금
+                                                    | Fri
                                             if(seller.optionSat === 'on')
                                                 label.btn-sm.btn.btn-week.active
                                                     input(type='checkbox', autocomplete='off', checked='checked')
-                                                    | 토
+                                                    | Sat
                                             else
                                                 label.btn-sm.btn.btn-week
                                                     input(type='checkbox', autocomplete='off')
-                                                    | 토
+                                                    | Sat
                                             if(seller.optionSun === 'on')
                                                 label.btn-sm.btn.btn-week.active
                                                     input(type='checkbox', autocomplete='off', checked='checked')
-                                                    | 일
+                                                    | Sun
                                             else
                                                 label.btn-sm.btn.btn-week
                                                     input(type='checkbox', autocomplete='off')
-                                                    | 일
+                                                    | Sun
                                         .row.col-md-3.justify-content-center
                                             input#txtopertime1.form-control.col-md-5(type='text', onkeypress='onlyNumber();', value=seller.optionTime1)
                                             h5(style='margin-top:10px') :
                                             input#txtopertime2.form-control.col-md-5(type='text', value=seller.optionTime2)
-                                label(for='service') 서비스 종류
+                                label(for='service') Type of service
                                 // Checkbox
                                 #service.form-check
                                     label.form-check-label(for='hide-profile1', style='color: #000; font-weight: 500; font-size: 16px;')
@@ -122,27 +122,27 @@ html(lang='en')
                                             input#hide-profile1.form-check-input(type='checkbox', value='', checked='checked')
                                         else
                                             input#hide-profile1.form-check-input(type='checkbox', value='')
-                                        | 							배달 서비스
+                                        | 							Delivery Service
                                     label.form-check-label(for='hide-profile2', style='color: #000; font-weight: 500; font-size: 16px;')
                                         if(seller.optionPacking === 'on')
                                             input#hide-profile2.form-check-input(type='checkbox', value='', checked='checked')
                                         else
                                             input#hide-profile2.form-check-input(type='checkbox', value='')
-                                        | 							포장 서비스
+                                        | 							Package Service
                                     label.form-check-label(for='hide-profile3', style='color: #000; font-weight: 500; font-size: 16px;')
                                         if(seller.optionVisit === 'on')
                                             input#hide-profile3.form-check-input(type='checkbox', value='', checked='checked')
                                         else
                                             input#hide-profile3.form-check-input(type='checkbox', value='')
-                                        | 							방문 서비스
+                                        | 							Visit Service
                                 // Submit button
                                 button.btn.btn-transparent Save My Changes
                         // Change Password
                         .widget.change-password
-                            h3.widget-header.user 매장 주소
+                            h3.widget-header.user Store address
                             form(action='#')
                                 .row
-                                    label#addresslabel.col-lg-2.col-md-2.col-sm-2(for='store_add') 주소
+                                    label#addresslabel.col-lg-2.col-md-2.col-sm-2(for='store_add') Address
                                     input#store_add.form-control.col-lg-7.col-md-7.col-sm-7(type='text', name='address', required='', readonly='', value=seller.address)
                                     button.col-lg-2.col-md-2.col-sm-2(type='button', onclick='goPopup()', style='border-radius:30px; color:#ffffff; height:40px;margin: 5px 10px 5px 10px;vertical-align: middle;background-color:gray;border-style:none;') 찾기
                                     input#entX(type='hidden', value=seller.location.coordinates[0], name='x', required='', readonly='')
@@ -153,7 +153,7 @@ html(lang='en')
                                 button.btn.btn-transparent Change ADDRESS
                         // Change Email Address
                         .widget.change-email.mb-0
-                            h3.widget-header.user 매장 사진
+                            h3.widget-header.user Store Image
                             form(action='#')
                                 .page.justify-content-center(style='margin-top: 10px;')
                                     // Our File Inputs

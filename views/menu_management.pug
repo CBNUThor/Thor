@@ -34,15 +34,15 @@ html(lang='en')
                     .col-md-10.offset-md-1.col-lg-9.offset-lg-0
                         // Edit Profile Welcome Text
                         .widget.welcome-message
-                            h2 메뉴 관리
-                            p 등록한 메뉴의 판매여부, 메뉴이름, 가격, 해쉬태그등 메뉴들의 상세정보를 관리할 수 있습니다.
+                            h2 Menu Management
+                            p You can manage detailed information of menus such as sales of the registered menu, menu name, price and hash tag.
                         section.section.offers
                             .container
                                 .row
                                     .col-md-12
                                         .block
                                             .col-xs-12.addMenu
-                                                button.btn.btn-block.btn-transparent(type="button", onclick="location.href='./register_menu'") 메뉴 등록
+                                                button.btn.btn-block.btn-transparent(type="button", onclick="location.href='./register_menu'") Submit Menu
                                             // Tab panes
                                             .tab-content
                                                 // Today's Top Offer
@@ -77,9 +77,9 @@ html(lang='en')
                                                                         // Media Body
                                                                         .media-body
                                                                             // Card Title
-                                                                            h5 메뉴이름:
+                                                                            h5 Menu Name:
                                                                                 = menu[i].title
-                                                                            h6 가격:
+                                                                            h6 Price:
                                                                                 = menu[i].price
                                                                             //h6 메뉴이용시간:30분
                                                                             h6

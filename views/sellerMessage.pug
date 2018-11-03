@@ -24,8 +24,8 @@ html(lang='en')
                     .col-md-10.offset-md-1.col-lg-9.offset-lg-0
                         // Edit Profile Welcome Text
                         .widget.welcome-message
-                            h2 메세지
-                            p 자기에게 온 메세지를 확인 해 볼 수 있습니다.
+                            h2 Message
+                            p You can check your message.
                         // Edit Personal Info
                         .widget.personal-info
                             #mainBox.container
@@ -49,11 +49,11 @@ html(lang='en')
                                 #buttonHeader.btn-group.btn-group-justified.submit(role='group')
                                     if(passport.user.seller_check)
                                         .btn-group(role='group')
-                                            button#buyerButton.btn.btnStyle(type='button') 구매자
+                                            button#buyerButton.btn.btnStyle(type='button') Buyer
                                         .btn-group(role='group')
-                                            button#sellerButton.btn.btnStyle(type='button') 판매자
+                                            button#sellerButton.btn.btnStyle(type='button') Seller
                                 .col-xs-12.messageHead
-                                    h1 메시지
+                                    h1 Message
                                 .col-xs-12.messageList
                                     each item in conver
                                         //mesageState 0일시에는 구매자용메세지, 1일때는 판매자용메세지

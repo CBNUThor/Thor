@@ -21,14 +21,14 @@ nav.navbar.navbar-toggleable-md.main-nav(style='z-index: 100;background-color:#f
             // Navigation List
             ul.navbar-nav.ml-auto.pull-right
                 li.nav-item
-                    a.nav-link(href='/menu') 메뉴
+                    a.nav-link(href='/menu') Menu
                 li.nav-item
-                    a.nav-link(href='#') 이벤트
+                    a.nav-link(href='#') Event
                 if(!passport)
                     li.nav-item
-                        a.nav-link(href='/seller/register_chef') 쉐프 신청하기
+                        a.nav-link(href='/seller/register_chef') Be Chef
                 else if(!passport.user.seller_check)
                     li.nav-item
-                        a.nav-link(href='/seller/register_chef') 쉐프 신청하기
+                        a.nav-link(href='/seller/register_chef') Be Chef
                 li.nav-item
-                    a.nav-link(href='/seller/') 마이페이지
+                    a.nav-link(href='/seller/') My page

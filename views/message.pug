@@ -39,11 +39,11 @@ html(lang='en')
             #buttonHeader.btn-group.btn-group-justified.submit(role='group')
                 if(passport.user.seller_check)
                     .btn-group(role='group')
-                        button#buyerButton.btn.btnStyle(type='button') 구매자
+                        button#buyerButton.btn.btnStyle(type='button') Buyer
                     .btn-group(role='group')
-                        button#sellerButton.btn.btnStyle(type='button') 판매자
+                        button#sellerButton.btn.btnStyle(type='button') Seller
             .col-xs-12.messageHead
-                h1 메시지
+                h1 Message
             .col-xs-12.messageList
                 each item in conver
                     //mesageState 0일시에는 구매자용메세지, 1일때는 판매자용메세지

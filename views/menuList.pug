@@ -52,7 +52,7 @@ html(lang='en')
                 .row
                     .col-md-8.offset-md-2.text-center
                         // Title text
-                        h3 메뉴 리스트
+                        h3 Menu List
             // Container End
             // Page content
         .container(style='margin-top: 85px;')
@@ -61,7 +61,7 @@ html(lang='en')
             .row
                 // First Photo Grid
                 .lgMapDiv.offset-lg-9.col-lg-3
-                    span.mapText 지도 보기
+                    span.mapText View Map
                     label.switch
                         input#mapChkbox(type='checkbox')
                         span.slider.round
@@ -77,17 +77,17 @@ html(lang='en')
                                             .cnt_text
                                                 h5= menu[i].title
                                                 // 제목
-                                                - var data=''; if(menu[i].optionMon==='on') data=data+'월 ';
-                                                - if(menu[i].optionTues === 'on') data=data+'화 ';
-                                                - if(menu[i].optionWen === 'on') data=data+'수 ';
-                                                - if(menu[i].optionThur === 'on') {data=data+'목 ';}
-                                                - if(menu[i].optionFri === 'on') {data=data+'금 ';}
-                                                - if(menu[i].optionSat === 'on') {data=data+'토 ';}
-                                                - if(menu[i].optionSun === 'on') {data=data+'일 ';}
+                                                - var data=''; if(menu[i].optionMon==='on') data=data+'Mon';
+                                                - if(menu[i].optionTues === 'on') data=data+'Tue';
+                                                - if(menu[i].optionWen === 'on') data=data+'Wed ';
+                                                - if(menu[i].optionThur === 'on') {data=data+'Thu ';}
+                                                - if(menu[i].optionFri === 'on') {data=data+'Fri';}
+                                                - if(menu[i].optionSat === 'on') {data=data+'Sat';}
+                                                - if(menu[i].optionSun === 'on') {data=data+'Sun';}
                                                 - data=data+'/ ';
-                                                - if(menu[i].optionDelivery==="on") data=data+'배달 ';
-                                                - if(menu[i].optionPacking==="on") data=data+'포장 ';
-                                                - if(menu[i].optionVisit==="on") data=data+'방문 ';
+                                                - if(menu[i].optionDelivery==="on") data=data+'Delivery';
+                                                - if(menu[i].optionPacking==="on") data=data+'Packing';
+                                                - if(menu[i].optionVisit==="on") data=data+'Visit ';
                                                 p
                                                     = data
                                                     br

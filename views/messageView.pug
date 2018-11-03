@@ -15,7 +15,7 @@ html(lang='en')
         link(rel='stylesheet', type='text/css', href='../stylesheets/MessageView_KKY.css')
         link(href='../stylesheets/style_HNH.css', rel='stylesheet')
 
-        title 메세지
+        title Message
     body.body-wrapper
         include components/topHeader
         include components/navBar_KSW
@@ -23,10 +23,10 @@ html(lang='en')
             .col-12
                 .col-5.col-md-3.setBtnPadding
                     p
-                        | 결제완료
+                        | Payment completed
                 .col-5.col-xs-offset-2.col-md-3.col-md-offset-6.setBtnPadding
                     button.btn-block.paymentButton(type='button', aria-label='Left Align')
-                        | 결제세부정보
+                        | Payment Details
             #chatList.col-12.messageDiv
                 if(message)
                     each item in message
@@ -64,13 +64,13 @@ html(lang='en')
                 form
                     .input-group
                         // 포커스될때만 테두리 그어주면 좋겠다고 생각됨
-                        textarea#content.form-control.message(type='text', placeholder='메시지를 작성하세요...')
+                        textarea#content.form-control.message(type='text', placeholder='Write your message...')
                         input#myname(type='hidden', value=passport.user.email, name='myname')
                         input#connum(type='hidden', value=connum, name='connum')
                         input#msg_to(type='hidden', value=member.email, name='msg_to')
                         .input-group-btn
                             button#message-button.btn.btn-default.send(type='button')
-                                | 전송
+                                | Send
         include components/footer_KSW
 
 

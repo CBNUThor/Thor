@@ -50,15 +50,15 @@ html(lang='en')
                         img(src='../../img/home/thorLogo.png', alt='Store Icon', style='margin: auto; display: block;')
                     .modal-body
                         if(safe===true)
-                            p.coupon-code 회원가입이 완료 되었습니다.
-                            a.btn.btn-transparent(href='#', style='float: left;') 로그인
-                            a.btn.btn-transparent(href='/', style='float: right;') 메인으로 돌아가기
+                            p.coupon-code Congratulation. Sign up is complete.
+                            a.btn.btn-transparent(href='#', style='float: left;') Sign In
+                            a.btn.btn-transparent(href='/', style='float: right;') Main
                         else
-                            p.coupon-code 인증 기한을 초과했습니다. 재 인증 받으세요.
+                            p.coupon-code Your authentication deadline has been exceeded. You have to recertify.
                             form(action='/member/reConfirm', method='post')
-                                button.btn.btn-transparent(type='submit', style='float: left;') 인증 메일 재발송
+                                button.btn.btn-transparent(type='submit', style='float: left;') Resend authentication mail
                             //a.btn.btn-transparent(href='#', style='float: left;') 인증 메일 재발송
-                            a.btn.btn-transparent(href='/', style='float: right;') 메인으로 돌아가기
+                            a.btn.btn-transparent(href='/', style='float: right;') Main
         // JAVASCRIPTS
         script(src='../../plugins/jquery/jquery.min.js')
         script(src='../../plugins/jquery-ui/jquery-ui.min.js')

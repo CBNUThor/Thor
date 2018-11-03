@@ -36,46 +36,50 @@ html(lang='en')
         function checkValue(){
             var passwordExp=/^(?=.*[a-zA-Z])(?=.*[!@#$%])(?=.*[0-9]).{6,15}/;
             if(!document.myform.password.value.match(passwordExp)){
-                alert("영문 대소문자, 숫자, ~!@#$%로 6~15글자 사이로 입력하세요.");
+                alert("\n" +
+                    "Please enter between 6 and 15 characters in English uppercase and lowercase letters, numbers, ~! @ # $%.");
                 return false;
             }
             var firstnameExp=/^[가-힣]{1,30}|[a-zA-Z]{2,30}$/;
             if(!document.myform.firstname.value.match(firstnameExp)){
-                alert("정확한 이름을 입력하세요.");
+                alert("\n" +
+                    "Please enter an exact First-name.");
                 return false;
             }
             var lastnameExp=/^[가-힣]{1,30}|[a-zA-Z]{2,30}$/;
             if(!document.myform.lastname.value.match(lastnameExp)){
-                alert("정확한 성을 입력하세요.");
+                alert("\n" +
+                    "Please enter an exact Last-name.");
                 return false;
             }
             var emailExp=/^[a-zA-Z0-9.!#$%&'+\\/=?^_'{|}+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*$/;
             if(!document.myform.email.value.match(emailExp)){
-                alert("이메일 형식에 맞게 입력하세요.");
+                alert("\n" +
+                    "Please enter an exact Email");
                 return false;
             }
             if(document.myform.lastname.value ==""){
-                alert("성을 입력하세요.");
+                alert("Enter First-name");
                 document.myform.lastname.focus();
                 return false;
             }else if(document.myform.firstname.value==""){
-                alert("이름을 입력하세요.");
+                alert("Enter Last-Name ");
                 document.myform.firstname.focus();
                 return false;
             }else if(document.myform.email.value==""){
-                alert("이메일을 입력하세요.");
+                alert("Enter your email");
                 document.myform.email.focus();
                 return false;
             }else if(document.myform.password.value ==""){
-                alert("비밀번호를 입력하세요.");
+                alert("Enter password");
                 document.myform.password.focus();
                 return false;
             }else if(document.myform.pw_confirm.value ==""){
-                alert("비밀번호 확인을 입력하세요.");
+                alert("Enter Confirm-Passwrod");
                 document.myform.password.focus();
                 return false;
             }else if(document.myform.password.value !=document.myform.pw_confirm.value){
-                alert("비밀번호가 다릅니다.");
+                alert("The password is different.");
                 document.myform.pw_confirm.focus();
                 return false;
             }
@@ -100,23 +104,23 @@ html(lang='en')
                             .panel-body
                                 form(action='', method='POST', role='form', name='myform')
                                     .form-group
-                                        label(for='') 성
+                                        label(for='') Last Name
                                         input#lastname.form-control(type='text', name='lastname')
                                         input#lastnameCheck.form-control(type='hidden', name='lastnameCheck' value='false')
                                     .form-group
-                                        label(for='') 이름
+                                        label(for='') First Name
                                         input#firstname.form-control(type='text', name='firstname')
                                         input#firstnameCheck.form-control(type='hidden', name='firstnameCheck' value='false')
                                     .form-group
-                                        label(for='') 이메일
+                                        label(for='') Email
                                         input#email.form-control(type='email', name='email')
                                         input#emailCheck.form-control(type='hidden', name='emailCheck' value='false')
                                     .form-group
-                                        label(for='') 비밀번호
+                                        label(for='') Password
                                         input#password.form-control(type='password', name='password', placeholder='숫자와 특수문자(!@#$%)를 혼합해서 입력해주세요( 6자 이상 15자 이하 )')
                                         input#passwordCheck.form-control(type='hidden', name='passwordCheck' value='false')
                                     .form-group
-                                        label(for='') 비밀번호 확인
+                                        label(for='') Password Confirm
                                         input#pw_confirm.form-control(type='password', name='pw_confirm')
                                         input#pw_confirmCheck.form-control(type='hidden', name='pw_confirmCheck' value='false')
                                     button.btn.btn-primary.btn-block(type='button', onclick='submitseller(this.form)') 회원가입 완료
@@ -148,12 +152,12 @@ html(lang='en')
                         //img(src='../img/home/thorLogo.png', alt='Store Icon', style='margin: auto; display: block;')
                         h6(style='text-align: center;')
                             strong artbit2012@gmail.com
-                            |  로 인증 메일을 발송하였습니다.
+                            | , We sent an authentication e-mail that.
                         br
                         p.coupon-code
-                            u 30분 내로 메일 인증을 하시면 최종 회원 가입이 완료됩니다.
-                        a.btn.btn-transparent(href='#', style='float: left;') 메일 재발송
-                        a.btn.btn-transparent(href='/', style='float: right;') 메인으로 돌아가기
+                            u If you verify your mail within 30 minutes, your final membership will be completed.
+                        a.btn.btn-transparent(href='#', style='float: left;') Resend Mail
+                        a.btn.btn-transparent(href='/', style='float: right;') Main
 
         // JAVASCRIPTS
         script(src='../plugins/jquery/jquery.min.js')

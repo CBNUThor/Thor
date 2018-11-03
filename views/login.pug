@@ -49,19 +49,19 @@ html(lang='en')
                             .panel-body
                                 form(action='', method='POST', role='form', name='myform')
                                     .form-group
-                                        label(for='') 이메일
+                                        label(for='') Email
                                         input#email.form-control(type='email', name='email')
                                         input#emailCheck.form-control(type='hidden', name='emailCheck' value='false')
                                     .form-group
-                                        label(for='') 비밀번호
+                                        label(for='') Password
                                         input#password.form-control(type='password', name='password')
                                         input#passwordCheck.form-control(type='hidden', name='passwordCheck' value='false')
                                     .form-check
                                         input#checkbox-1.checkbox-custom.form-check-input(name='checkbox-1', type='checkbox')
-                                        label.checkbox-custom-label.form-check-label(for='checkbox-1') 아이디 저장
+                                        label.checkbox-custom-label.form-check-label(for='checkbox-1') save ID
                                     if(error)
                                         #alertBox.alert.alert-danger(role='alert')=error
-                                    button.btn.btn-primary.btn-block(type='button', onclick='return login(this.form)') 로그인
+                                    button.btn.btn-primary.btn-block(type='button', onclick='return login(this.form)') Sign In
                                     .wrapper
                                         .d-block.social-login.text-center.one
                                             button.btn.btn-social.titled.naver(type='button', onclick="location.href='/member/LoginNaver'")
@@ -72,8 +72,8 @@ html(lang='en')
                                         .d-block.social-login.text-center.three
                                             button.btn.btn-social.titled.google(type='button', onclick="location.href='/member/LoginGoogle'")
                                                 | login google
-                                    button.btn.btn-link.btn-block(type='button', onclick="location.href='../member/Join'") 회원가입
-                                    button.btn.btn-link.btn-block(type='button', onclick="location.href='../member/Find_Password'") 비밀번호 찾기
+                                    button.btn.btn-link.btn-block(type='button', onclick="location.href='../member/Join'") Sign Up
+                                    button.btn.btn-link.btn-block(type='button', onclick="location.href='../member/Find_Password'") Forgot your password
         //
           ============================
           =            Footer            =

@@ -63,24 +63,24 @@ html(lang='en')
                     .menu-container.username.col-xs-12.col-sm-12.col-md-12.col-lg-12
                         = sellerMember.first_name+" "+sellerMember.last_name
                     .menu-container.username.col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        button.btn-size(type='button', onclick="return sendMessage("+ "\"" +sellerMember.email + "\"" +")") 메세지 보내기
+                        button.btn-size(type='button', onclick="return sendMessage("+ "\"" +sellerMember.email + "\"" +")") Send Message
             .col-xs-12.col-sm-12.col-md-12.col-lg-12
                 br
                 hr
             .col-xs-12.res_info
                 p
-                    span.mytitle.w3-col.s6.m6.l6 메뉴
+                    span.mytitle.w3-col.s6.m6.l6 Menu
                     span.myinfo.w3-rest= menu.title
                 p
-                    span.mytitle.w3-col.s6.m6.l6 가격
+                    span.mytitle.w3-col.s6.m6.l6 Price
                     span.myinfo.w3-rest= menu.price
                 //p
                     span.mytitle.w3-col.s6.m6.l6 예약 유형
                     span.w3-rest.myinfo 자율 예약
                 p
-                    span.mytitle.w3-col.s6.m6.l6 판매 시간
+                    span.mytitle.w3-col.s6.m6.l6 Sales Time
                     span.w3-rest.myinfo= menu.optionTime1 + '~' + menu.optionTime2
-                .mytitle.w3-col.s12.m12.l12 상세 설명
+                .mytitle.w3-col.s12.m12.l12 detailed description
                 .myinfo.w3-col.s12.m12.l12
                     p
                         = menu.text
@@ -140,7 +140,7 @@ html(lang='en')
                         i.fa.fa-calendar
                 //.col-12.col-sm-12.col-md-12.col-lg-12.myhr
                     hr
-                h2 식사 장소
+                h2 Dining Place
                 // Slider
                 .horiz-scroll.scroll-feature
                     .scroller
@@ -174,8 +174,8 @@ html(lang='en')
                 .col-xs-12.col-sm-12.col-md-12.col-lg-12.myhr
                     br
                 .col-xs-12.col-sm-12.col-md-12.col-lg-12.menu-container.purchase-btn
-                    button.btn.btn-warning.col-6.col-sm-6.col-md-6.col-lg-6 판매자 즐겨찾기
-                    button.btn.btn-success(type='button', data-toggle='modal', data-target='#purchase').col-xs-6.col-sm-6.col-md-6.col-lg-6 구매
+                    button.btn.btn-warning.col-6.col-sm-6.col-md-6.col-lg-6 Seller Favorites
+                    button.btn.btn-success(type='button', data-toggle='modal', data-target='#purchase').col-xs-6.col-sm-6.col-md-6.col-lg-6 Buy
                 .col-xs-12.col-sm-12.col-md-12.col-lg-12.myhr
                     br
                     br
@@ -193,8 +193,8 @@ html(lang='en')
                     .modal-body
                         .col-xs-12.res_info
                             p
-                                span.mytitle.w3-col.s6.m6.l6 메뉴
-                                span.myinfo.w3-rest 전주 비빔밥
+                                span.mytitle.w3-col.s6.m6.l6 Menu
+                                span.myinfo.w3-rest Bibim-Bab
                             //p
                             //    span.mytitle.w3-col.s6.m6.l6 가격
                             //    span.myinfo.w3-rest 8,000원
@@ -207,8 +207,8 @@ html(lang='en')
                             //p
                             //    span.mytitle.w3-col.s6.m6.l6 수량
                             //    span.w3-rest.myinfo 16:00 ~ 18:00
-                        a.btn.btn-transparent(href='#', data-dismiss='modal', style='float: left;') 뒤로 가기
-                        a.btn.btn-transparent(href='/', style='float: right;') 결제하기
+                        a.btn.btn-transparent(href='#', data-dismiss='modal', style='float: left;') Back
+                        a.btn.btn-transparent(href='/', style='float: right;') Make a payment
 
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
         script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
